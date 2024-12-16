@@ -24,6 +24,8 @@ const frameHandler = frames(async (ctx) => {
     tip_allowance: string;
     remaining_tip_allowance: string;
     points: string;
+    pointsRank: string;  
+
   
   }
 
@@ -162,11 +164,14 @@ Check Your $DEGEN Stats
           </div>
         </div>
   
-        <div tw="flex flex-col items-center justify-center text-[#885aee] mt-2">
-          <div tw="flex text-4xl">Rank: {data?.user_rank ?? "N/A"}</div>
-          <div tw="flex text-4xl">{data?.snapshot_day ?? "N/A"}</div>
+        <div tw="flex text-4xl justify-center text-[#38BDf8]">{data?.snapshot_day ?? "N/A"}</div>
+        <div tw="flex flex-row items-center justify-between text-[#885aee] mt-2 p-50  py-0">
+          <div tw="flex text-4xl">Allowance Rank: {data?.user_rank ?? "N/A"}</div>
+          <div tw="flex text-4xl">Points Rank: {data?.pointsRank ?? "N/A"}</div>
+
+     
           </div>
-          <div tw="flex flex-col w-full p-50 py-0 text-[#86e635]">
+          <div tw="flex flex-col w-full p-50 py-0 text-[#86e635] mt-2">
 
           <div tw="flex flex-row justify-between">
             <span tw="text-5xl">Allowance:</span>
@@ -189,7 +194,7 @@ Check Your $DEGEN Stats
           </div>
           </div>
           <div tw="flex flex-col items-center">
-             <span tw="text-3xl mt-5">
+             <span tw="text-3xl mt-4">
       {data?.tip_allowance === "N/A" ? "Lock atleast 10,000 $DEGEN to get Allowance" : "The Hat Stays On! "}
     </span>
 
