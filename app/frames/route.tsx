@@ -189,8 +189,8 @@ Check Your $DEGEN Stats
           </div>
           </div>
           <div tw="flex flex-col items-center">
-            <span tw="text-3xl mt-5">
-      {data?.tip_allowance === "N/A" ? "Lock atleast 10,000 $DEGEN to get Allowance" : ""}
+             <span tw="text-3xl mt-5">
+      {data?.tip_allowance === "N/A" ? "Lock atleast 10,000 $DEGEN to get Allowance" : "The Hat Stays On! "}
     </span>
 
           </div>
