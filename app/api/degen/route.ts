@@ -34,6 +34,8 @@ export async function GET(req: NextRequest) {
     let tip_allowance = "N/A";
     let remaining_tip_allowance = "N/A";
     let points = "N/A";
+    let pointsRank = "N/A";
+    
 
     // Handle allowances data
     if (Array.isArray(allowancesData) && allowancesData.length > 0) {
@@ -48,6 +50,7 @@ export async function GET(req: NextRequest) {
     // Handle points data
     if (Array.isArray(pointsData) && pointsData.length > 0) {
       points = pointsData[0].points;
+      pointsRank = pointsData[0].leaderboard_rank;
     } else {
       console.log("No data received from the points API");
     }
@@ -58,6 +61,7 @@ export async function GET(req: NextRequest) {
       tip_allowance,
       remaining_tip_allowance,
       points,
+      pointsRank,
     });
 
     return NextResponse.json({
@@ -66,6 +70,7 @@ export async function GET(req: NextRequest) {
       tip_allowance,
       remaining_tip_allowance,
       points,
+      pointsRank,
     });
   } catch (error) {
     console.error("Unexpected error:", error);
