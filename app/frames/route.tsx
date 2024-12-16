@@ -213,9 +213,9 @@ const shareText2 = encodeURIComponent(
 );
 
 
-  const shareUrl1 = `https://warpcast.com/~/compose?text=${shareText1}&embeds[]=https://followers-count.vercel.app/frames`;
+  const shareUrl1 = `https://warpcast.com/~/compose?text=${shareText1}&embeds[]=https://stats-degen.vercel.app/frames`;
 
-  const shareUrl2 = `https://warpcast.com/~/compose?text=${shareText2}&embeds[]=https://followers-count.vercel.app/frames${
+  const shareUrl2 = `https://warpcast.com/~/compose?text=${shareText2}&embeds[]=https://stats-degen.vercel.app/frames${
     fid ? `?userfid=${fid}` : ""
   }`;
 
